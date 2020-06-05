@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.Master.cs" Inherits="LAN_OR_WAN_EXAMINATION_SYSTEM.students.Student" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ES - Students</title>
+    <link rel="icon" href="../assets/image/logo.png">
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap/css/template/modern-business.css" rel="stylesheet" />
+    <script src="../assets/custom/js/custom.js"></script>
+    <script type="text/javascript">
+        var seconds = "<%=seconds%>";
+        var minutes = "<%=minutes%>";
+        var hours = "<%=hours%>";
+        var timerTick;
+        function display() {
+            seconds -= 1
+            if (seconds < 0) {
+                seconds = 59;
+                minutes -= 1;
+            }
+            if (minutes < 0) {
+                minutes = 59;
+                hours -= 1;
+            }
+            else {
+                if ((seconds == 0) && (minutes == 0) && (hours == 0)) {
+                    examIsDone();
+                }
+                else {
+                    document.getElementById("lblShowTimer").innerHTML = "Time Lefts: " + hours + " hour " + minutes + "min " + seconds + "sec";
+                    timerTick = setTimeout("display()", 1000);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="studentForm" runat="server">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../students/Form_Categories.aspx">
+                    <img src="../assets/image/logo.png" alt="Logo" height="40px" width="40px">
+                    Examination System - Students</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../students/Form_Categories.aspx">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../students/Form_MyResult.aspx">My Results</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../students/Form_ChangePassword.aspx">Change Password</a>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="lbtnLogOut" runat="server" Text="Log In" CssClass="nav-link" OnClick="lbtnLogOut_Click"></asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <br />
+            <h5 class="card-header"><%= "Welcome, " + studentFullName %></h5>
+            <asp:ContentPlaceHolder ID="maincontentplaceholder" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+        </div>
+        <br />
+        <footer class="py-1 bg-dark fixed-bottom">
+            <div class="container ">
+                <div class="text-center">
+                    <h4>
+                        <asp:Label ID="lblShowTimer" runat="server" Text="Label" ForeColor="White" Visible="False" Font-Bold="True"></asp:Label>
+                    </h4>
+                </div>
+                <p class="m-0 text-center text-white">Created By: Joshua C. Magoliman</p>
+            </div>
+        </footer>
+        <script src="../assets/bootstrap/js/jquery.min.js"></script>
+        <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </form>
+</body>
+</html>

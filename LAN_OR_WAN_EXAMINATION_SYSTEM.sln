@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAN_OR_WAN_EXAMINATION_SYSTEM", "LAN_OR_WAN_EXAMINATION_SYSTEM\LAN_OR_WAN_EXAMINATION_SYSTEM.csproj", "{25620951-1D94-4EC2-A0E0-260B5B160107}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25620951-1D94-4EC2-A0E0-260B5B160107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25620951-1D94-4EC2-A0E0-260B5B160107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25620951-1D94-4EC2-A0E0-260B5B160107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25620951-1D94-4EC2-A0E0-260B5B160107}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
