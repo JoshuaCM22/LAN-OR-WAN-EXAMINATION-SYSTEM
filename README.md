@@ -3,8 +3,8 @@
 * Purpose: My Project
 * Used IDE: MS Visual Studio 2012
 * Target Framework: .Net Framework 4.5
-* Web Application Framework: ASP.Net
-* ASP.Net Programming Models: Web Forms
+* Web Application Framework: ASP.NET
+* ASP.NET Site: ASP.NET Web Forms
 * Front End: HTML5, CSS3, JavaScript, Bootstrap v4.0, Font Awesome 4.7.0
 * Back End: C#, MS SQL Server 2012
 * Responsive Web Design: Yes
