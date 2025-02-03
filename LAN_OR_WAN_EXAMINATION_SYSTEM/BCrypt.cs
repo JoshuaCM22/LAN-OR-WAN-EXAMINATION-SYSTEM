@@ -22,7 +22,7 @@ namespace LAN_OR_WAN_EXAMINATION_SYSTEM
     // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 
-    [assembly: System.Reflection.AssemblyVersion("0.1")]
+    //  [assembly: System.Reflection.AssemblyVersion("0.1")]
 
     /// <summary>BCrypt implements OpenBSD-style Blowfish password hashing
     /// using the scheme described in "A Future-Adaptable Password Scheme"
